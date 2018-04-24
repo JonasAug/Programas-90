@@ -1,0 +1,27 @@
+Declare @name varchar(60)
+declare ponteiro cursor for (
+SELECT NAME FROM sys.sysdatabases
+where NAME <> 'master' and
+NAME <> 'ReportServer' and
+NAME <> 'ReportServerTempDB' and
+NAME <> 'tempdb' and
+NAME <> 'msdb' and
+NAME <> 'model' and
+NAME <> 'ReportServer$SQL2016' and
+NAME <> 'ReportServer$SQL2016TempDB' and
+NAME <> 'DWDiagnostics' and
+NAME <> 'DWConfiguration' and
+NAME <> 'DWQueue'
+) ORDER BY NAME
+
+open ponteiro
+FETCH NEXT FROM ponteiro INTO @name;
+WHILE @@FETCH_STATUS = 0
+BEGIN   
+PRINT @name
+FETCH NEXT FROM ponteiro INTO @name;
+END
+
+CLOSE ponteiro;
+DEALLOCATE ponteiro;
+go

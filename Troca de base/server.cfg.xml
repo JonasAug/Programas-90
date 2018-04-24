@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TemplateConfiguracao xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Repositorio>
+    <Server>pat-0086</Server>
+    <Database>ipe
+</Database>
+    <User>sa</User>
+    <PWD>senha</PWD>
+    <PortaConexaoMobile>9013</PortaConexaoMobile>
+    <Dialect>MSSQL2005</Dialect>
+  </Repositorio>
+  <SessaoUsuario>
+    <TempoInatividade>9999</TempoInatividade>
+  </SessaoUsuario>
+  <AuditoriaEstadoEnable>true</AuditoriaEstadoEnable>
+</TemplateConfiguracao>

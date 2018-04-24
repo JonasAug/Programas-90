@@ -1,0 +1,68 @@
+update empresa_financeiro set usarintegracaosispeq = 0;
+update empresa_financeiro set ConfiguracaoSispeq =''
+IF EXISTS (SELECT name FROM sysobjects WHERE name = 'TG_CATEGORIA_MATERIAL_12' AND type = 'TR')
+BEGIN
+    DROP TRIGGER TG_CATEGORIA_MATERIAL_12
+END
+
+IF EXISTS (SELECT name FROM sysobjects WHERE name = 'TG_CATEGORIA_MATERIAL_3' AND type = 'TR')
+BEGIN
+    DROP TRIGGER TG_CATEGORIA_MATERIAL_3
+END
+
+IF EXISTS (SELECT name FROM sysobjects WHERE name = 'TG_MATERIAL_12' AND type = 'TR')
+BEGIN
+    DROP TRIGGER TG_MATERIAL_12
+END
+
+IF EXISTS (SELECT name FROM sysobjects WHERE name = 'TG_MATERIAL_3' AND type = 'TR')
+BEGIN
+    DROP TRIGGER TG_MATERIAL_3
+END
+
+IF EXISTS (SELECT name FROM sysobjects WHERE name = 'TG_ITEM_RM_2' AND type = 'TR')
+BEGIN
+    DROP TRIGGER TG_ITEM_RM_2
+END
+
+IF EXISTS (SELECT name FROM sysobjects WHERE name = 'TG_PROCESSO_COMPRA_2' AND type = 'TR')
+BEGIN
+    DROP TRIGGER TG_PROCESSO_COMPRA_2
+END
+
+IF EXISTS (SELECT name FROM sysobjects WHERE name = 'TG_ITEM_PROCESSO_COMPRA_2' AND type = 'TR')
+BEGIN
+    DROP TRIGGER TG_ITEM_PROCESSO_COMPRA_2
+END
+
+IF EXISTS (SELECT name FROM sysobjects WHERE name = 'TG_ITEM_OC_12' AND type = 'TR')
+BEGIN
+    DROP TRIGGER TG_ITEM_OC_12
+END
+
+IF EXISTS (SELECT name FROM sysobjects WHERE name = 'TG_ITEM_DOCUMENTO_12' AND type = 'TR')
+BEGIN
+    DROP TRIGGER TG_ITEM_DOCUMENTO_12
+END
+
+IF EXISTS (SELECT * FROM sysobjects WHERE name = 'MascaraPatrimonioSispeq' AND type = 'P')
+BEGIN
+    DROP PROCEDURE MascaraPatrimonioSispeq
+END
+
+IF EXISTS (SELECT name FROM sysobjects WHERE name = 'TG_LOCAL_12' AND type = 'TR')
+BEGIN
+  DROP TRIGGER TG_LOCAL_12
+END
+
+IF EXISTS (SELECT name FROM sysobjects WHERE name = 'TG_LOCAL_3' AND type = 'TR')
+BEGIN
+    DROP TRIGGER TG_LOCAL_3
+END
+
+
+IF EXISTS (SELECT name FROM sysobjects WHERE name = 'TG_ENDERECO_2' AND type = 'TR')
+BEGIN
+    DROP TRIGGER TG_ENDERECO_2
+END
+go

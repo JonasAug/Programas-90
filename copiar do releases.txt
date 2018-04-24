@@ -1,0 +1,11 @@
+md "Versao"
+cd "Versao"
+md "SetupCliente"
+md "SetupServidor"
+
+xcopy "\\90BHFSPRD01\Releases\Gestor\SetupCliente" "D:\Gestor 90-Versoes\Versao\SetupCliente" /E
+xcopy "\\90BHFSPRD01\Releases\Gestor\SetupServidor" "D:\Gestor 90-Versoes\Versao\SetupServidor" /E
+cd "D:\Gestor 90-Versoes\Versao\SetupServidor"
+start SetupServidor90.exe
+cd "D:\Gestor 90-Versoes\Versao\SetupCliente"
+start SetupCliente90.exe

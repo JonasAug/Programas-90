@@ -1,0 +1,1 @@
+xcopy "C:\Users\jonas.augusto\Desktop\90 Pessoal\ServerService.exe.config" "C:\90\ServidorGestor90" y

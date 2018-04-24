@@ -1,0 +1,11 @@
+</Database>
+    <User>sa</User>
+    <PWD>senha</PWD>
+    <PortaConexaoMobile>9013</PortaConexaoMobile>
+    <Dialect>MSSQL2005</Dialect>
+  </Repositorio>
+  <SessaoUsuario>
+    <TempoInatividade>9999</TempoInatividade>
+  </SessaoUsuario>
+  <AuditoriaEstadoEnable>true</AuditoriaEstadoEnable>
+</TemplateConfiguracao>
